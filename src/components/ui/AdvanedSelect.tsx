@@ -16,7 +16,7 @@ export default function AdvancedSelect({ label }: { label: string }) {
   };
 
   return (
-    <Box >
+    <Box>
       <Typography
         component="div"
         sx={{

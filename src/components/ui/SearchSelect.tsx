@@ -28,14 +28,13 @@ const StyledAutocompletePopper = styled("div")(({ theme }) => ({
     fontSize: 13,
   },
   [`& .${autocompleteClasses.listbox}`]: {
-    backgroundColor:"#fff" ,
+    backgroundColor: "#fff",
     padding: 0,
     [`& .${autocompleteClasses.option}`]: {
       minHeight: "auto",
       alignItems: "flex-start",
       padding: 8,
-      borderBottom: "1px solid #eaecef"
-      ,
+      borderBottom: "1px solid #eaecef",
       '&[aria-selected="true"]': {
         backgroundColor: "transparent",
       },
@@ -56,22 +55,22 @@ function PopperComponent(props: PopperComponentProps) {
 }
 
 const StyledPopper = styled(Popper)(({ theme }) => ({
-  border: "1px solid #e1e4e8" ,
+  border: "1px solid #e1e4e8",
   borderRadius: 6,
   width: 300,
   zIndex: theme.zIndex.modal,
   fontSize: 13,
-  color:  "#24292e" ,
-  backgroundColor:"#fff" ,
+  color: "#24292e",
+  backgroundColor: "#fff",
 }));
 
 const StyledInput = styled(InputBase)(({ theme }) => ({
   padding: 10,
   width: "100%",
-  borderBottom: "1px solid #eaecef" ,
+  borderBottom: "1px solid #eaecef",
   "& input": {
     borderRadius: 4,
-    backgroundColor:  "#fff",
+    backgroundColor: "#fff",
     padding: 8,
     transition: theme.transitions.create(["border-color", "box-shadow"]),
     border: "1px solid #eaecef",
@@ -84,7 +83,7 @@ const Button = styled(ButtonBase)(({ theme }) => ({
   width: "100%",
   textAlign: "left",
   paddingBottom: 8,
-  color: "#586069" ,
+  color: "#586069",
   fontWeight: 600,
   "& span": {
     width: "100%",
@@ -114,7 +113,9 @@ const labels = [
 export default function SearchSelect() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [value, setValue] = React.useState<LabelType | null>(labels[0]);
-  const [pendingValue, setPendingValue] = React.useState<LabelType | null>(labels[0]);
+  const [pendingValue, setPendingValue] = React.useState<LabelType | null>(
+    labels[0]
+  );
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setPendingValue(value);

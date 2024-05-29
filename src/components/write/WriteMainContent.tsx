@@ -33,7 +33,7 @@ const WriteMainContent = () => {
         {
           method: "POST",
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({ question: text }),
         }
@@ -50,7 +50,10 @@ const WriteMainContent = () => {
   return (
     <Stack
       sx={{
-        width: 583,
+        width: {
+          md: 583,
+          xs: 1,
+        },
         minHeight: "calc(100vh - 64px)",
         borderBottom: 1,
         borderRight: 1,

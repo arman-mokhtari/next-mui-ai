@@ -20,7 +20,7 @@ export const POST = async (request: Request) => {
       max_tokens: 2048,
       presence_penalty: 0,
       stop: null,
-      stream: false,  // stream should be false to get a complete response directly
+      stream: false,
       temperature: 1,
       top_p: 1,
       logprobs: false,

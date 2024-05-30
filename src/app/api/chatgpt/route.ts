@@ -34,7 +34,7 @@ export const POST = async (request: Request) => {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
-        Authorization: "Bearer sk-204230952eaa48928cb0397a3aa78a77",
+        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       data: data,
     };

@@ -26,7 +26,7 @@ const WriteMainContent = () => {
   const [aiResponse, setAiResponse] = useState("");
   const [isSubmittingAi, setIsSubmittingAi] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = useState(true);
 
   const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setText(event.target.value);
@@ -66,7 +66,7 @@ const WriteMainContent = () => {
       if (line.startsWith("```")) {
         if (isCodeBlock) {
           elements.push(
-            <Box key={index} sx={{ position: "relative" }}>
+            <Box key={index} sx={{ position: "relative", mb: 2 }}>
               <CopyToClipboard
                 text={codeContent}
                 onCopy={() => setCopied(true)}
@@ -104,11 +104,12 @@ const WriteMainContent = () => {
     <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
       <Box
         sx={{
-          flex: 0.4,
+          flex: { xs: 1, sm: 0.4 },
           minHeight: "calc(100vh - 64px)",
-          borderBottom: 1,
-          borderRight: 1,
+          borderBottom: { xs: 1, sm: "none" },
+          borderRight: { xs: "none", sm: 1 },
           borderColor: "#cbced8",
+          backgroundColor: "#f5f5f5",
         }}
       >
         <Stack m={2} direction="row" spacing={1}>
@@ -128,6 +129,11 @@ const WriteMainContent = () => {
           }}
         >
           <TextField
+            sx={{
+              "& .MuiInputBase-root": {
+                backgroundColor: "#fff",
+              },
+            }}
             multiline
             rows={3}
             fullWidth
@@ -164,10 +170,12 @@ const WriteMainContent = () => {
           </Grid>
         </Stack>
       </Box>
+      {/* answer section */}
       <Box
         sx={{
-          flex: 0.6,
+          flex: { xs: 1, sm: 0.6 },
           position: "relative",
+          width: "100%",
         }}
       >
         {aiResponse && (
@@ -179,9 +187,9 @@ const WriteMainContent = () => {
           <Collapse in={open}>
             <Alert
               sx={{
-                position: "absolute",
-                top: 10,
-                right: 10,
+                position: "fixed",
+                bottom: 16,
+                right: 16,
                 zIndex: 1000,
               }}
               severity="success"

@@ -8,6 +8,27 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "description": "A personal relationship management tool using Next.js, MUI, and Deep-Seek AI.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arman-mokhtari/next-mui-ai"
+  },
+  "keywords": [
+    "next",
+    "react",
+    "ai",
+    "deepseek-coder",
+    "mui"
+  ],
+  "bugs": {
+    "url": "https://github.com/arman-mokhtari/next-mui-ai/issues",
+    "email": "rmn.mokhtarii@gmail.com"
+  },
+  "author": {
+    "name": "Arman Mokhtari",
+    "email": "rmn.mokhtarii@gmail.com",
+    "url": "https://armanmokhtari.pro"
+  },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.4",

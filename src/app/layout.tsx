@@ -5,7 +5,7 @@ import LayoutMC from "@/components/shared/LayoutMC";
 import { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Ai nerd studio task",
+  title: "Ai Project",
   description: "By Arman Mokhtari",
 };
 
